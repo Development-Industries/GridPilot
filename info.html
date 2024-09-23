@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Other Apps and Info</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- GridPilot Long Logo -->
+    <img src="LongPilot.png" alt="GridPilot Logo" id="headerLogo">
+
+    <div id="infoContainer">
+        <h2>GridPilot - Other Apps</h2>
+
+        <!-- Information about the company and other apps -->
+        <div id="companyInfo">
+            <p>GridPilot is your one-stop platform for scheduling and managing social media posts across multiple platforms. In addition to our post scheduler, we offer a range of apps designed to help you manage your social presence efficiently.</p>
+
+            <h4>Other Apps</h4>
+            <ul>
+                <li>GridPilot Insights - Track social media performance metrics in real-time.</li>
+                <li>GridPilot Ads Manager - Manage ad campaigns across platforms from one dashboard.</li>
+                <li>GridPilot Automation - Automate repetitive social media tasks to save time.</li>
+            </ul>
+        </div>
+
+        <!-- Terms and Conditions -->
+        <p><a href="#" id="termsLink">View Terms and Conditions</a></p>
+
+        <!-- Back Button to go back to popup.html -->
+        <button id="backButton">Back to Main Page</button>
+    </div>
+
+    <script>
+        // Handle navigation to Terms and Conditions page
+        document.getElementById('termsLink').addEventListener('click', function (event) {
+            event.preventDefault();
+            window.open(chrome.runtime.getURL('terms.html'), '_self');
+        });
+
+        // Back Button to return to popup.html
+        document.getElementById('backButton').addEventListener('click', function () {
+            window.open(chrome.runtime.getURL('popup.html'), '_self');
+        });
+    </script>
+
+</body>
+</html>

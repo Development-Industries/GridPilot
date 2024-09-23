@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GridPilot Post Scheduler</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Logo Section (Top-Left) -->
+    <img src="LongPilot.png" alt="GridPilot Logo" id="headerLogo">
+
+    <h3>Welcome to GridPilot</h3>
+
+    <!-- Post Content Area -->
+    <textarea id="postContent" placeholder="Write your post..."></textarea>
+
+    <!-- Media Attachment -->
+    <input type="file" id="mediaUpload" accept="image/*">
+
+    <!-- Image preview element in popup.html -->
+    <img id="previewImage" src="" alt="Media Preview" style="display: none; width: 100%; height: auto; margin-top: 10px; border-radius: 5px;">
+
+    <!-- Date/Time Picker -->
+    <input type="datetime-local" id="scheduleTime">
+
+    <!-- Icons and Options (Including Tag Input) -->
+    <div class="icon-container">
+        <img src="CALIcon64.png" alt="Calendar Icon" class="icon">
+        <p>Schedule Your Post</p>
+    </div>
+
+    <!-- Tag Input for User Tagging -->
+    <div id="tagUsers">
+        <label for="tagInput">Tag Users (@username):</label>
+        <input type="text" id="tagInput" placeholder="Start typing to tag...">
+        <ul id="suggestedTags" style="display: none;"></ul> <!-- Suggestions will appear here -->
+    </div>
+
+    <!-- Social Media Buttons -->
+    <div class="social-buttons">
+        <button id="fbLoginButton" class="social-btn">
+            <img src="FBIcon64.png" alt="Facebook Icon" class="icon"> Login with Facebook
+        </button>
+        <button id="twitterLoginButton" class="social-btn">
+            <img src="XIcon64.png" alt="Twitter Icon" class="icon"> Login with Twitter
+        </button>
+        <button id="instaLoginButton" class="social-btn">
+            <img src="INSTIcon64.png" alt="Instagram Icon" class="icon"> Login with Instagram
+        </button>
+    </div>
+
+    <!-- Post Buttons (Schedule, Post Now, Preview) -->
+    <div class="post-buttons-container">
+        <button id="scheduleBtn" class="brighter-button">
+            <img src="CLCKIcon64.png" alt="Clock Icon" class="icon"> Schedule Post
+        </button>
+        <button id="postNowBtn" class="brighter-button">
+            <img src="CHCKIcon64.png" alt="Check Icon" class="icon"> Post Now
+        </button>
+    </div>
+
+    <button id="previewBtn" class="brighter-button">
+        <img src="CHCKIcon64.png" alt="Check Icon" class="icon"> Preview Post
+    </button>
+
+    <!-- Links to other pages -->
+    <div class="navigation-links">
+        <button id="loginGridPilotBtn">Login to GridPilot</button>
+        <button id="termsBtn">Terms and Conditions</button>
+        <button id="otherAppsBtn">Other Apps</button>
+    </div>
+
+    <!-- Instructional Box -->
+    <div id="instructionBox">
+        <h3>Instructions</h3>
+        <p>1. Write your post in the text area.</p>
+        <p>2. Attach an image by clicking the "Choose File" button (optional).</p>
+        <p>3. Pick a date and time to schedule your post using the calendar icon.</p>
+        <p>4. Click "Schedule Post" to queue your post for publishing at the selected time.</p>
+        <p>5. Click "Post Now" to immediately publish your post.</p>
+        <p>6. Preview your post before publishing by clicking the "Preview" button.</p>
+        <p>7. Login with Facebook, Twitter, or Instagram to post directly on your social media accounts.</p>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>

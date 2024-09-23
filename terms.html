@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms and Conditions</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- GridPilot Long Logo -->
+    <img src="LongPilot.png" alt="GridPilot Logo" id="headerLogo">
+
+    <div id="termsContainer">
+        <h2>Terms and Conditions</h2>
+
+        <!-- Terms and Conditions Text -->
+        <p>
+            Welcome to GridPilot! By using our service, you agree to the following terms and conditions:
+        </p>
+        <ul>
+            <li>You are responsible for ensuring that all posts made using GridPilot comply with platform policies.</li>
+            <li>GridPilot is not liable for any damages caused by scheduling errors or platform outages.</li>
+            <li>Users must have authorized access to the social media accounts connected to GridPilot.</li>
+            <li>GridPilot reserves the right to modify these terms at any time.</li>
+            <li>Any misuse of the platform may result in the suspension of your account.</li>
+        </ul>
+
+        <p>
+            For more details, please contact us at support@gridpilot.com.
+        </p>
+
+        <!-- Back Button to go back to popup.html -->
+        <button id="backButton">Back to Main Page</button>
+    </div>
+
+    <script>
+        // Back Button to return to popup.html
+        document.getElementById('backButton').addEventListener('click', function () {
+            window.open(chrome.runtime.getURL('popup.html'), '_self');
+        });
+    </script>
+
+</body>
+</html>
